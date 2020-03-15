@@ -60,3 +60,29 @@ class _VoteSectionState extends State<VoteSection> {
     );
   }
 }
+
+/*
+StreamBuilder(
+              stream: Firestore.instance
+                  .collection('votes')
+                  .document('voteCount')
+                  .snapshots(),
+              builder: (BuildContext context, AsyncSnapshot snapshot) {
+                switch (snapshot.connectionState) {
+                  case ConnectionState.none:
+                    return CircularProgressIndicator();
+                  case ConnectionState.waiting:
+                    return CircularProgressIndicator();
+
+                  default:
+                    return VoteSection(
+                        name: "Cats",
+                        counter: _catCounter,
+                        backgroundUrl: "assets/cat.jpg",
+                        onPressed: () {
+                          _incrementCatCounter();
+                        });
+                }
+              },
+            ),
+*/
